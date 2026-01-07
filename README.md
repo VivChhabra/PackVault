@@ -36,7 +36,7 @@ The project intentionally focuses on usability and product thinking rather than 
 
 ## Live Demo
 
-Demo: https://packvault.vercel.app  
+Demo: https://pack-vault.vercel.app/  
 Repository: https://github.com/VivChhabra/PackVault
 
 ## Design & Engineering Approach
