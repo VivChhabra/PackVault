@@ -1,0 +1,7 @@
+{
+  "name": "PackVault",
+  "description": "Professional Pokemon TCG inventory and binder management for vendors.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
