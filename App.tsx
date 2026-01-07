@@ -23,7 +23,7 @@ const TradeItem: React.FC<{
   return (
     <div 
       onClick={onClick}
-      className="bg-[#1a252b] p-6 rounded-2xl border-2 border-white/5 shadow-2xl hover:border-white/10 transition-colors cursor-pointer active:scale-98"
+      className="w-full bg-[#1a252b] p-6 rounded-2xl border-2 border-white/5 shadow-2xl hover:border-white/10 transition-colors cursor-pointer active:scale-98"
     >
       <div className="flex justify-between items-start mb-4">
         <div className="flex flex-col">
@@ -519,7 +519,8 @@ const App: React.FC = () => {
         )}
 
         {activeTab === 'trades' && (
-          <section className="flex flex-col items-center animate-in fade-in duration-500 w-full max-w-md">
+          <section className="flex flex-col items-center animate-in fade-in duration-500 w-full">
+          <div className="w-full max-w-md">
             <div className="header-pill mb-12">
               <div className="icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" className="w-6 h-6"><path d="M16 3l4 4-4 4M8 21l-4-4 4-4M20 7H4M4 17h16" /></svg>
@@ -529,7 +530,7 @@ const App: React.FC = () => {
                 <span className="text-3xl font-black leading-none">{state.trades.length}</span>
               </div>
             </div>
-            <div className="space-y-6 w-full">
+            <div className="space-y-6 w-full flex flex-col items-center">
               {state.trades.length > 0 ? (() => {
                 // Group trades by date
                 const grouped = state.trades.reduce((acc, trade) => {
@@ -574,8 +575,12 @@ const App: React.FC = () => {
                   </div>
                 ));
               })() : (
-                <div className="text-center py-10 opacity-10 italic uppercase tracking-[0.2em]">No Trades Recorded</div>
+                <div className="flex flex-col items-center justify-center text-center py-20 opacity-30 italic uppercase tracking-[0.2em]">
+  No Trades Recorded
+</div>
+
               )}
+            </div>
             </div>
           </section>
         )}

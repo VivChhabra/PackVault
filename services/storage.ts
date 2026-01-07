@@ -4,11 +4,11 @@ import { AppState } from "../types";
 const STORAGE_KEY = 'packvault_data_v2';
 
 export const saveState = (state: AppState) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 };
 
 export const loadState = (): AppState => {
-  const data = localStorage.getItem(STORAGE_KEY);
+  const data = sessionStorage.getItem(STORAGE_KEY);
   if (!data) return { collection: [], binders: [], trades: [], currency: 'USD' };
   try {
     const parsed = JSON.parse(data);
